@@ -1,0 +1,166 @@
+{ "cryptoData" :
+   [
+    {
+      "id": "bitcoin",
+      "name": "Bitcoin",
+      "image": {
+        "small": "https://example.com/bitcoin.png"
+      },
+      "market_data": {
+        "current_price": {
+          "usd": 50000
+        },
+        "total_volume": {
+          "usd": 1000000000
+        },
+        "price_change_percentage_24h": 2.5,
+        "circulating_supply": 18735287,
+        "market_cap_change_percentage_24h": 1.8,
+        "last_updated": "2023-11-20T12:30:00Z",
+        "block_time_in_minutes": 10,
+        "high_24h": {
+          "usd": 52000
+        }
+      }
+    },
+    {
+      "id": "ethereum",
+      "name": "Ethereum",
+      "image": {
+        "small": "https://example.com/ethereum.png"
+      },
+      "market_data": {
+        "current_price": {
+          "usd": 3500
+        },
+        "total_volume": {
+          "usd": 500000000
+        },
+        "price_change_percentage_24h": -1.5,
+        "circulating_supply": 118952487,
+        "market_cap_change_percentage_24h": -0.7,
+        "last_updated": "2023-11-20T12:30:00Z",
+        "block_time_in_minutes": 15,
+        "high_24h": {
+          "usd": 3700
+        }
+      }
+    },
+    {
+      "id": "ripple",
+      "name": "Ripple",
+      "image": {
+        "small": "https://example.com/ripple.png"
+      },
+      "market_data": {
+        "current_price": {
+          "usd": 1.5
+        },
+        "total_volume": {
+          "usd": 30000000
+        },
+        "price_change_percentage_24h": 0.8,
+        "circulating_supply": 456789012,
+        "market_cap_change_percentage_24h": 0.5,
+        "last_updated": "2023-11-20T12:30:00Z",
+        "block_time_in_minutes": 5,
+        "high_24h": {
+          "usd": 1.8
+        }
+      }
+    },
+    {
+      "id": "litecoin",
+      "name": "Litecoin",
+      "image": {
+        "small": "https://example.com/litecoin.png"
+      },
+      "market_data": {
+        "current_price": {
+          "usd": 200
+        },
+        "total_volume": {
+          "usd": 150000000
+        },
+        "price_change_percentage_24h": 1.2,
+        "circulating_supply": 84000000,
+        "market_cap_change_percentage_24h": 0.9,
+        "last_updated": "2023-11-20T12:30:00Z",
+        "block_time_in_minutes": 8,
+        "high_24h": {
+          "usd": 220
+        }
+      }
+    },
+    {
+      "id": "cardano",
+      "name": "Cardano",
+      "image": {
+        "small": "https://example.com/cardano.png"
+      },
+      "market_data": {
+        "current_price": {
+          "usd": 2.3
+        },
+        "total_volume": {
+          "usd": 80000000
+        },
+        "price_change_percentage_24h": -0.5,
+        "circulating_supply": 321654987,
+        "market_cap_change_percentage_24h": -0.2,
+        "last_updated": "2023-11-20T12:30:00Z",
+        "block_time_in_minutes": 12,
+        "high_24h": {
+          "usd": 2.5
+        }
+      }
+    },
+    {
+      "id": "stellar",
+      "name": "Stellar",
+      "image": {
+        "small": "https://example.com/stellar.png"
+      },
+      "market_data": {
+        "current_price": {
+          "usd": 0.8
+        },
+        "total_volume": {
+          "usd": 40000000
+        },
+        "price_change_percentage_24h": 1.6,
+        "circulating_supply": 987654321,
+        "market_cap_change_percentage_24h": 1.0,
+        "last_updated": "2023-11-20T12:30:00Z",
+        "block_time_in_minutes": 6,
+        "high_24h": {
+          "usd": 0.9
+        }
+      }
+    },
+    {
+      "id": "polkadot",
+      "name": "Polkadot",
+      "image": {
+        "small": "https://example.com/polkadot.png"
+      },
+      "market_data": {
+        "current_price": {
+          "usd": 30
+        },
+        "total_volume": {
+          "usd": 120000000
+        },
+        "price_change_percentage_24h": 2.0,
+        "circulating_supply": 567890123,
+        "market_cap_change_percentage_24h": 1.3,
+        "last_updated": "2023-11-20T12:30:00Z",
+        "block_time_in_minutes": 7,
+        "high_24h": {
+          "usd": 32
+        }
+      }
+    }
+]
+}
+  

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import CoinsTable from "./components/CoinsTable";
+import PricePrediction from "./components/PricePrediction";
 
 const fetchData = async () => {
   try {
@@ -42,8 +43,7 @@ const App = () => {
     <div className="App">
       <h1>Crypto Table</h1>
 
-      <CoinsTable />
-      <h1>Crypto Table</h1>
+     
       {error && <p>Error: {error.message}</p>}
       {cryptoData && (
         <table>
@@ -61,6 +61,10 @@ const App = () => {
               <th>Блок-час (хв)</th>
               <th>Ринковий обсяг 24г (USD)</th>
               <th>Макс. ціна 24г (USD)</th>
+              <th>
+                Prediction
+              </th>
+
             </tr>
           </thead>{" "}
           <tbody>
@@ -92,11 +96,15 @@ const App = () => {
                 <td>{coin?.block_time_in_minutes || "Невідомо"}</td>
                 <td>{formatCurrency(coin?.market_data?.total_volume?.usd)}</td>
                 <td>{formatCurrency(coin?.market_data?.high_24h?.usd)}</td>
-              </tr>
+ <td>
+                <PricePrediction currencyName={coin.name} />
+              </td>              </tr>
             ))}
           </tbody>
         </table>
-      )}
+      )} 
+      <CoinsTable />
+      <h1>Crypto Table</h1>
     </div>
   );
 };

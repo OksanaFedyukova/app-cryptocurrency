@@ -61,7 +61,7 @@ const CoinsTable = () => {
               alt={row.original.name}
               style={{ width: '30px', height: '30px', borderRadius: '50%' }}
             />
-            <span>{name}</span>
+            <span>{row.original.name}</span>
           </Box>
         ),
       },

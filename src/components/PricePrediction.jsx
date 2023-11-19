@@ -10,7 +10,7 @@ const PricePrediction = ({ currencyName }) => {
     const fetchPriceData = async () => {
       try {
         const response = await axios.get(
-          `https://api.coingecko.com/api/v3/coins/${currencyName}/market_chart`,
+          `https://api.coingecko.com/api/v3/coins/${currencyName.toLowerCase()}/market_chart`,
           {
             params: {
               vs_currency: 'usd',

@@ -41,6 +41,9 @@ const App = () => {
 
   return (
     <div className="App">
+      <h1>Crypto Material React Tabe</h1>
+
+<CoinsTable />
       <h1>Crypto Table</h1>
 
      
@@ -102,9 +105,7 @@ const App = () => {
             ))}
           </tbody>
         </table>
-      )} 
-      <CoinsTable />
-      <h1>Crypto Table</h1>
+      )}       
     </div>
   );
 };

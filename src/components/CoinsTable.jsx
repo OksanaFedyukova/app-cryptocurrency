@@ -6,39 +6,12 @@ import {
     useMaterialReactTable,
   } from 'material-react-table';
 import { Box } from '@mui/material';
-  
+  import {cryptoData} from '../cryptoData.json'
 
-const fetchData = async () => {
-    try {
-      const response = await fetch('https://api.coingecko.com/api/v3/coins/');
-      if (!response.ok) {
-        throw new Error('Failed to fetch data');
-      }
-      const data = await response.json();
-      return data;
-    } catch (error) {
-      console.error('Error fetching data:', error.message);
-      throw error;
-    }
-  };
+
   
 const CoinsTable = () => {
 
-    const [cryptoData, setCryptoData] = useState(null);
-    const [error, setError] = useState(null);
-  
-    useEffect(() => {
-      const fetchDataAndSetState = async () => {
-        try {
-          const data = await fetchData();
-          setCryptoData(data);
-        } catch (error) {
-          setError(error);
-        }
-      };
-  
-      fetchDataAndSetState();
-    }, []);
   
     const formatCurrency = (value) => (value ? `$${value}` : 'Невідомо');
     const formatPercentage = (value) => (value ? `${value}%` : 'Невідомо');

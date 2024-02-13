@@ -1,38 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./App.css";
 import CoinsTable from "./components/CoinsTable";
-import PricePrediction from "./components/PricePrediction";
-
-const fetchData = async () => {
-  try {
-    const response = await fetch("https://api.coingecko.com/api/v3/coins/");
-    if (!response.ok) {
-      throw new Error("Failed to fetch data");
-    }
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error("Error fetching data:", error.message);
-    throw error;
-  }
-};
-
+import {cryptoData} from '../src/cryptoData.json'
 const App = () => {
-  const [cryptoData, setCryptoData] = useState(null);
-  const [error, setError] = useState(null);
 
-  useEffect(() => {
-    const fetchDataAndSetState = async () => {
-      try {
-        const data = await fetchData();
-        setCryptoData(data);
-      } catch (error) {
-        setError(error);
-      }
-    };
-
-    fetchDataAndSetState();
-  }, []);
 
   const formatCurrency = (value) => (value ? `$${value}` : "Невідомо");
   const formatPercentage = (value) => (value ? `${value}%` : "Невідомо");
@@ -47,7 +18,6 @@ const App = () => {
       <h1>Crypto Table</h1>
 
      
-      {error && <p>Error: {error.message}</p>}
       {cryptoData && (
         <table>
           <thead>
@@ -99,9 +69,7 @@ const App = () => {
                 <td>{coin?.block_time_in_minutes || "Невідомо"}</td>
                 <td>{formatCurrency(coin?.market_data?.total_volume?.usd)}</td>
                 <td>{formatCurrency(coin?.market_data?.high_24h?.usd)}</td>
- <td>
-                <PricePrediction currencyName={coin.name} />
-              </td>              </tr>
+            </tr>
             ))}
           </tbody>
         </table>
